@@ -11,7 +11,7 @@ def start_handler(update, context):
 
 
 def main():
-    updater = Updater(token=TOKEN, use_context=True)
+    updater = Updater(token=os.environ['TOKEN'], use_context=True)
     dispacher = updater.dispatcher
 
     dispacher.add_handler(ConversationHandler(
